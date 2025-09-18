@@ -1,0 +1,17 @@
+services:
+  development:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+      target: dev_image
+      args:
+        - USERNAME=${USER}
+        - USER_UID=${USER_UID}
+        - USER_GID=${USER_GID}
+    user: ${USER}
+
+    volumes:
+      - .:/workspace:cached
+      - ~/.ssh/:/home/${USER}/.ssh:ro
+      - ~/.gitconfig:/home/${USER}/.gitconfig:ro
+    command: sleep infinity

@@ -1,0 +1,40 @@
+{
+  "editor.minimap.enabled": false,
+  "editor.formatOnSave": true,
+  "workbench.colorTheme": "GitHub Dark Dimmed",
+  "workbench.tree.indent": 20,
+  "workbench.tree.expandMode": "singleClick",
+  "workbench.tree.renderIndentGuides": "always",
+  "workbench.colorCustomizations": {
+    "tree.indentGuidesStroke": "#00ff00",
+    "editorGutter.background": "#000000",
+    "editorLineNumber.activeForeground": "#23c403",
+    "editorLineNumber.foreground": "#5c5c5c",
+    "editor.lineHighlightBackground": "#030b77"
+  },
+  "cmake.configureOnOpen": true,
+  "cmake.options.statusBarVisibility": "visible",
+  "workbench.iconTheme": "material-icon-theme",
+  "gitlens.ai.experimental.provider": "openai",
+  "gitlens.ai.experimental.openai.model": "gpt-4-turbo-preview",
+  "[python]": {
+    "diffEditor.ignoreTrimWhitespace": true,
+    "editor.formatOnSave": true
+  },
+  "git.autofetch": true,
+  "python.analysis.typeCheckingMode": "basic",
+  "python.analysis.autoImportCompletions": true,
+  "python.analysis.extraPaths": ["${workspaceFolder}"],
+  "terminal.integrated.env.linux": {
+    "PYTHONPATH": "${workspaceFolder}:${env:PYTHONPATH}"
+  },
+  "terminal.integrated.env.osx": {
+    "PYTHONPATH": "${workspaceFolder}:${env:PYTHONPATH}"
+  },
+  "terminal.integrated.env.windows": {
+    "PYTHONPATH": "${workspaceFolder};${env:PYTHONPATH}"
+  },
+  "python.testing.pytestArgs": ["src"],
+  "python.testing.unittestEnabled": false,
+  "python.testing.pytestEnabled": true
+}

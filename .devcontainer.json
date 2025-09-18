@@ -1,0 +1,38 @@
+{
+  "name": "development",
+  "dockerComposeFile": ["./docker-compose.yml"],
+  "initializeCommand": ["./setenv.sh"],
+  "service": "development",
+  "init": true,
+  "shutdownAction": "none",
+  "workspaceFolder": "/workspace",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "wayou.vscode-todo-highlight",
+        "robocorp.robotframework-lsp",
+        "kevinrose.vsc-python-indent",
+        "ms-python.debugpy",
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "pkief.material-icon-theme",
+        "njpwerner.autodocstring",
+        "gruntfuggly.todo-tree",
+        "ms-ceintl.vscode-language-pack-de",
+        "redhat.vscode-yaml",
+        "oderwat.indent-rainbow",
+        "ryanluker.vscode-coverage-gutters",
+        "mechatroner.rainbow-csv",
+        "tamasfe.even-better-toml",
+        "esbenp.prettier-vscode",
+        "github.vscode-github-actions",
+        "github.github-vscode-theme",
+        "github.remotehub",
+        "github.vscode-pull-request-github",
+        "github.copilot",
+        "github.copilot-chat",
+        "charliermarsh.ruff"
+      ]
+    }
+  }
+}
