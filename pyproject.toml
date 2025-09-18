@@ -9,7 +9,6 @@ dependencies = [
     "pylint~=3.2",
     "robotframework~=7.0",
     "robotframework-seleniumlibrary~=6.5",
-    "plotille~=5.0",
     "pytype",
     "pre-commit>=4.0.1",
 ]
