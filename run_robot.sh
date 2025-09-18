@@ -28,7 +28,7 @@ while getopts ${OPTSTRING} opt; do
   esac
 done
 
-CMD='robot ./rfw_console/'
+CMD='robot ./rfw/'
 CONVERT='rebot -x xunit_robot.xml output.xml'
 
 if [ ${VAR_USE_DOCKER} = "true" ]; then
