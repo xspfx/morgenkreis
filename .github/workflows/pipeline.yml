@@ -2,12 +2,12 @@ name: Automation Pipeline
 on: [push]
 
 env:
-  IMAGE_TAG: "3tr4xx/python_playground:arm64"
+  IMAGE_TAG: "xspfx/morgenkreis_dev:latest"
 
 jobs:
   build_docker_image:
     env:
-      IMAGE_TAG: "3tr4xx/python_playground:arm64"
+      IMAGE_TAG: "xspfx/morgenkreis_dev:latest"
     runs-on: self-hosted
     steps:
       - name: Checkout code
@@ -17,7 +17,7 @@ jobs:
       - name: Log in to Docker Hub
         uses: docker/login-action@v3
         with:
-          username: 3tr4xx
+          username: xspfx
           password: ${{ secrets.PAT_2FA }}
       - name: Build Docker image
         run: docker build -t ${{ env.IMAGE_TAG }} -f ./docker/Dockerfile .
@@ -30,7 +30,7 @@ jobs:
     runs-on: self-hosted
     needs: [build_docker_image]
     container:
-      image: "3tr4xx/python_playground:arm64"
+      image: "xspfx/morgenkreis_dev:latest"
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -42,7 +42,7 @@ jobs:
     runs-on: self-hosted
     needs: [build_docker_image]
     container:
-      image: "3tr4xx/python_playground:arm64"
+      image: "xspfx/morgenkreis_dev:latest"
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -54,7 +54,7 @@ jobs:
     runs-on: self-hosted
     needs: [linting_ruff, linting_pylint]
     container:
-      image: "3tr4xx/python_playground:arm64"
+      image: "xspfx/morgenkreis_dev:latest"
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -66,7 +66,7 @@ jobs:
     runs-on: self-hosted
     needs: [linting_ruff, linting_pylint]
     container:
-      image: "3tr4xx/python_playground:arm64"
+      image: "xspfx/morgenkreis_dev:latest"
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -78,7 +78,7 @@ jobs:
     runs-on: self-hosted
     needs: [type_checking_pytype, type_checking_mypy]
     container:
-      image: "3tr4xx/python_playground:arm64"
+      image: "xspfx/morgenkreis_dev:latest"
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -115,7 +115,7 @@ jobs:
     runs-on: self-hosted
     needs: [type_checking_pytype, type_checking_mypy]
     container:
-      image: "3tr4xx/python_playground:arm64"
+      image: "xspfx/morgenkreis_dev:latest"
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
