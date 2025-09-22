@@ -360,7 +360,6 @@ version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
     { name = "mypy" },
-    { name = "plotille" },
     { name = "pre-commit" },
     { name = "pylint" },
     { name = "pytest" },
@@ -373,7 +372,6 @@ dependencies = [
 [package.metadata]
 requires-dist = [
     { name = "mypy", specifier = "~=1.10" },
-    { name = "plotille", specifier = "~=5.0" },
     { name = "pre-commit", specifier = ">=4.0.1" },
     { name = "pylint", specifier = "~=3.2" },
     { name = "pytest", specifier = "~=8.2" },
@@ -528,12 +526,6 @@ sdist = { url = "https://files.pythonhosted.org/packages/23/e8/21db9c9987b0e7288
 wheels = [
     { url = "https://files.pythonhosted.org/packages/40/4b/2028861e724d3bd36227adfa20d3fd24c3fc6d52032f4a93c133be5d17ce/platformdirs-4.4.0-py3-none-any.whl", hash = "sha256:abd01743f24e5287cd7a5db3752faf1a2d65353f38ec26d98e25a6db65958c85", size = 18654, upload-time = "2025-08-26T14:32:02.735Z" },
 ]
-
-[[package]]
-name = "plotille"
-version = "5.0.0"
-source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/8a/73/3f342572f7f916e387e546cc502d6cad35e7162ba0bcde203669e15aa3af/plotille-5.0.0.tar.gz", hash = "sha256:99e5ca51a2e4c922ead3a3b0863cc2c6a9a4b3f701944589df10f42ce02ab3dc", size = 53392, upload-time = "2022-12-01T09:55:22.008Z" }
 
 [[package]]
 name = "pluggy"
